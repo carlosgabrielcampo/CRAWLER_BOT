@@ -8,7 +8,10 @@ const correiosSearch = {
   pgRoutePrint: '#resultado-DNEC tbody tr td'
 }
 
-const ceps = ['72593-114', '91370-110', '64017-280', '28994-816', '67133-745', '68447-000,', '59076-050', '65065-730', '21765-250', '72910-990'] 
+const ceps = [
+'72593-114', '91370-110', '64017-280', '28994-816', '67133-745', 
+'68447-000,', '59076-050', '65065-730', '21765-250', '72910-990'
+]
 
 async function getAdresses(page, selector) {
   const adress = await page.$$eval(selector, adds => adds.map(add => add.innerText))

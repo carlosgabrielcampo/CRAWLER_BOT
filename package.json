@@ -24,5 +24,8 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "puppeteer": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0"
   }
 }
