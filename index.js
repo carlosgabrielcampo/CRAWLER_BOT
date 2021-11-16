@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs')
+
+const allAdresses = []
 
 const correiosSearch = {
   pageAdd: 'https://buscacepinter.correios.com.br/app/endereco/index.php',
@@ -15,7 +18,7 @@ const ceps = [
 
 async function getAdresses(page, selector) {
   const adress = await page.$$eval(selector, adds => adds.map(add => add.innerText))
-  console.log(adress)
+  allAdresses.push(adress)
   return adress
 }
 
@@ -29,7 +32,16 @@ async function cepFinder(pageData, cep) {
   await getAdresses(page, pageData.pgRoutePrint)
   await browser.close();
 }
+function writeFile() {
+  try {
+    const allAdds = ceps.map(e => cepFinder(correiosSearch, e));
+    Promise.all(allAdds).then(() => {
+        fs.writeFile('Addresses.txt', JSON.stringify(allAdresses), e => console.error(e));
+    console.log(allAdresses) 
+  })
+  } catch (e) {
+    console.error(e)
+  }
+} 
 
-ceps.forEach(e => {
-  cepFinder(correiosSearch, e)
-});
+writeFile()
