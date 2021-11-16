@@ -16,12 +16,26 @@ O objetivo dele é realizar consultas de CEP de forma fácil e eficiente.
 
 ---
 
-## Acesso e execução do projeto 
+## Requisitos para a execução
 
-1. Clone o repositório
+1. Ter o node.js instalado 
+
+- `https://nodejs.org/en/download/` 
+
+- Após a instalação reiniciar o computador'
+
+- *Caso já esteja instalado*, pode passar a próxima etapa
+
+## Acesso e execução do projeto
+
+0. Na pasta aonde será baixado/clonado o repositório, utilizar o comando 
+
+- `git init`
+
+1. Clone/baixe o repositório 
 
 - `git clone https://github.com/carlosgabrielcampo/CRAWLER_BOT.git`.
-- Entre na pasta do repositório que você acabou de clonar:
+- Entre na pasta do repositório:
   - `cd CRAWLER_BOT`
 
 2. Instale as dependências
