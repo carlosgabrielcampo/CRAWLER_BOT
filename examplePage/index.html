@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Acha CEP</title>
 </head>
 <body>
-  <form>
-    <label>
-      CEP
-      <input type="text" id="cepHolder" maxlength="9"/>
-    </label>
-    <label> Logradouro <input type="text" id="streetHolder"/> </label>
-    <label> Bairro <input type="text" id="neighborhood"/> </label>
-    <label> Cidade <input type="text" id="cityHolder"/> </label>
-    <label> UF <input type="text" id="stateHolder"/> </label>
-  </form>
+  <div class='topDiv'>
+    <form class="form">
+      <div> Digite seu CEP </div>
+      <label class="cep"> <span>CEP</span> <input type="text" id="cepHolder" maxlength="9"/></label>
+      <label class="street"> <span>Logradouro</span> <input type="text" id="streetHolder"/> </label>
+      <label class="neighborhood"> <span>Bairro</span> <input type="text" id="neighborhood"/> </label>
+      <label class="city"> <span>Cidade</span> <input type="text" id="cityHolder"/> </label>
+      <label class="uf"> <span>UF</span> <input type="text" id="stateHolder"/> </label>
+    </form>
+  </div>
   <script src="./page.js"></script>
 </body>
 </html>
