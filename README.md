@@ -10,9 +10,20 @@
 
 ## O que foi desenvolvido
 
-Este bot foi desenvolvido usando a biblioteca PUPPETEER.
+Neste projeto foi desenvolvido um bot usando a biblioteca PUPPETEER, e também uma demonstração em formato HTML 
+do auto-preenchimento de campos no preenchimento do CEP em um formulário.
 
-O objetivo dele é realizar consultas de CEP de forma fácil e eficiente.
+### Bot
+
+O objetivo do bot é acessar a página, ler as informações e copiar elas, e fazer elas aparecerem no terminal em forma de log.
+
+Foi realizado também uma filtragem em caso de mais de um endereço aparecer na requisição e uma função que cria um documento na base do projeto com as informações retornadas
+
+### WebPage
+
+O procedimento da página é diferente, ela utiliza uma API do site 'https://viacep.com.br/', que retorna um JSON com as informações.
+
+Então o script realiza o auto-preenchimento dos campos com as informações retornadas e caso volte um erro, é exibido um alerta na tela  
 
 ---
 
@@ -28,7 +39,7 @@ O objetivo dele é realizar consultas de CEP de forma fácil e eficiente.
 
 ## Acesso e execução do projeto
 
-0. Na pasta aonde será baixado/clonado o repositório, utilizar o comando 
+0. Na pasta aonde será baixado/clonado o repositório, utilizar o comando (opcional)
 
 - `git init`
 
@@ -42,8 +53,24 @@ O objetivo dele é realizar consultas de CEP de forma fácil e eficiente.
 
 - `npm install`
 
-3. Rode o aplicativo
+### Bot
+
+- 1 Na pasta principal do repositórios digite o comando no terminal 
 
 - `npm start`
+
+
+### WebPage
+
+- 1 Entre na pasta do repositório:
+  - `cd CRAWLER_BOT/exemplePage`
+
+- 2 Selecione o arquivo  
+
+  - `index.html` e abra com o navegador
+
+- 3 Digite no campo 
+  
+  -`CEP` o cep desejado, e aguarde a resposta
 
 ---
