@@ -1,5 +1,3 @@
-# CRAWLER_BOT
-
 # Boas vindas ao repositório do projeto CRAWLER_BOT!
 
 # Sumário
