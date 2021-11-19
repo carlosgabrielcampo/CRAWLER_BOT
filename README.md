@@ -7,6 +7,8 @@
 - [Boas vindas ao repositório do projeto CRAWLER_BOT!](#boas-vindas-ao-repositório-do-projeto-CRAWLER_BOT)
 - [O que foi desenvolvido](#o-que-foi-desenvolvido)
 - [Acesso e execução do projeto](#Acesso-ao-projeto)
+- [Testes](#Testes)
+- [Observação](#Observação)
 
 ## O que foi desenvolvido
 
@@ -75,6 +77,18 @@ Então o script realiza o auto-preenchimento dos campos com as informações ret
 
 ---
 
+## Testes
+
+Neste projeto foi utilizado uma biblioteca específica do Jest `jest-puppeteer`, com o objetivo de testar o funcionamento da biblioteca assim como as propriedades de pesquisa de elementos HTML utilizadas no site dos correios.
+
+1. Para realizar a exwecução dos testes utilize o comando
+
+- `npm test` na pasta base do projeto
+
+---
+
 ### Observação
 
-Foram perdidos parte dos commits, pois ao fazer o primeiro push havia ido sem o arquivo *.gitignore*, o procedimento realizado foi fechar a branch e iniciar uma nova, e os commits do início até a construção da parte inicial do bot foram perdidos.   
+Foram perdidos parte dos commits, pois ao fazer o primeiro push havia ido sem o arquivo *.gitignore*, o procedimento realizado foi fechar a branch e iniciar uma nova, e os commits do início até a construção da parte inicial do bot foram perdidos.
+
+---

@@ -16,10 +16,10 @@ function dataFill (data) {
 }
 
 function cepSearch({target}) {
+  try {
   const {value} = target
   const regex = /[0-9]{5}-[\d]{3}/u
   const cepPattern = value.match(regex)
-  try {
     if (cepPattern[0] !== null) {
       const cep = cepPattern[0].replace(/\D/u, '')
       fetch(`https://viacep.com.br/ws/${cep}/json/`).
@@ -28,8 +28,9 @@ function cepSearch({target}) {
         dataFill(data)
     })
     }
+  return '';
   } catch (e) {
-    return ''
+    return '';
   }
 }
 
