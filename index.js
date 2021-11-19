@@ -1,16 +1,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs')
+const {correiosSearch: cs} = require('./util/searchInfo')
 
 const allAdresses = []
-
-const correiosSearch = {
-  pageAdd: 'https://buscacepinter.correios.com.br/app/endereco/index.php',
-  typeInput: '#endereco',
-  clickInput: '#btn_pesquisar',
-  waitElem: 'td',
-  pgRoutePrint: '#resultado-DNEC tbody tr td',
-  adressLegth: 4
-}
 
 const ceps = [
 '72593-114', '91370-110', '64017-280', '28994-816', '67133-745', 
@@ -44,7 +36,7 @@ async function cepFinder(pageData, cep) {
 }
 function writeFile() {
   try {
-    const allAdds = ceps.map(e => cepFinder(correiosSearch, e));
+    const allAdds = ceps.map(e => cepFinder(cs, e));
     Promise.all(allAdds).then(() => {
       fs.writeFile('Addresses.txt', JSON.stringify(allAdresses), e => console.error(e));
     console.log(allAdresses)
