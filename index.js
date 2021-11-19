@@ -33,7 +33,7 @@ async function getAdresses(page, selector, cep) {
 }
 
 async function cepFinder(pageData, cep) {
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(pageData.pageAdd);
   await page.type(pageData.typeInput, cep);
@@ -56,3 +56,7 @@ function writeFile() {
 } 
 
 writeFile()
+
+module.exports = {
+  cepFinder
+};
