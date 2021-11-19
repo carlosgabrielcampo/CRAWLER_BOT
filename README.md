@@ -74,3 +74,7 @@ Então o script realiza o auto-preenchimento dos campos com as informações ret
   -`CEP` o cep desejado, e aguarde a resposta
 
 ---
+
+### Observação
+
+Foram perdidos parte dos commits, pois ao fazer o primeiro push havia ido sem o arquivo *.gitignore*, o procedimento realizado foi fechar a branch e iniciar uma nova, e os commits do início até a construção da parte inicial do bot foram perdidos.   
